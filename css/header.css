@@ -1,0 +1,36 @@
+header {
+    min-height: 80px;
+    padding: 16px;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+header .layout .logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header .layout nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .layout nav ul {
+    display: flex;
+    gap: 16px;
+}

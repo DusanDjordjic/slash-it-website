@@ -1,0 +1,108 @@
+.hero .layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 64px;
+}
+
+.hero .layout .right img {
+    width: 100%;
+    aspect-ratio: 1;
+    background-position: center;
+    object-fit: contain;
+}
+
+.about .layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 64px;
+}
+
+.about .layout img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-position: center;
+}
+
+.projects .layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 32px;
+}
+
+.projects .layout .project-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.projects .layout .project-title h3 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-bg);
+    transform: scale(1.5);
+}
+
+.projects .layout .project-title img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    background-position: center;
+}
+
+.projects .layout .project-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 64, 138, 0.7); /* Blue color with 50% opacity */
+    pointer-events: none; /* This ensures the overlay doesn't interfere with clicking the image */
+}
+.projects .layout article {
+    padding: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.projects .layout .project-title.rev {
+    order: 1;
+}
+
+.projects .layout article.rev {
+    order: 2;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero .layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about .layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .projects .layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects .layout .project-title.rev {
+        order: 2;
+    }
+
+    .projects .layout article.rev {
+        order: 1;
+    }
+}
