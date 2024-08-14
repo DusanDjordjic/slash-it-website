@@ -27,6 +27,9 @@
 .projects .layout {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+}
+
+.projects .layout:first-of-type {
     margin-top: 32px;
 }
 
@@ -67,8 +70,9 @@
     background-color: rgba(17, 64, 138, 0.7); /* Blue color with 50% opacity */
     pointer-events: none; /* This ensures the overlay doesn't interfere with clicking the image */
 }
+
 .projects .layout article {
-    padding: 64px;
+    padding: 32px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -104,5 +108,8 @@
 
     .projects .layout article.rev {
         order: 1;
+    }
+    .projects .layout article {
+        padding: 64px;
     }
 }
