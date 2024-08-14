@@ -35,8 +35,47 @@
                         </li>
                     </ul>
                 </nav>
+                <button
+                    id="open-sidebar"
+                    class="icon-button"
+                    aria-label="open sidebar"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </header>
+        <aside id="sidebar">
+            <div class="container">
+                <header>
+                    <div class="layout">
+                        <a href="index.html" class="logo">IT / Web</a>
+                        <button
+                            id="close-sidebar"
+                            class="icon-button"
+                            aria-label="close sidebar"
+                        >
+                            <i class="fa-sharp fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <h3 class="serif-display">Navigation</h3>
+                <ul class="navigation list">
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#about">About us</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
         <main>
             <section class="section hero">
                 <div class="container layout">
@@ -235,7 +274,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact" id="kontakt">
+            <section class="contact" id="contact">
                 <div class="container">
                     <h2>Contact Us</h2>
                     <p>
@@ -260,5 +299,6 @@
         <footer>
             <small>&copy; Slash IT, 2024</small>
         </footer>
+        <script src="./js/header.js"></script>
     </body>
 </html>

@@ -11,3 +11,12 @@
 .button:hover {
     text-decoration: none;
 }
+
+.icon-button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-bg);
+}

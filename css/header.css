@@ -18,14 +18,14 @@ header .layout {
     justify-content: space-between;
     gap: 16px;
 }
-
-header .layout .logo {
+#sidebar .logo,
+header .logo {
     font-size: 20px;
     font-weight: 700;
 }
 
 header .layout nav {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -33,4 +33,62 @@ header .layout nav {
 header .layout nav ul {
     display: flex;
     gap: 16px;
+}
+
+header #open-sidebar {
+    display: inline-flex;
+}
+
+#sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.1s ease-out;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    z-index: 2000;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#sidebar h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+#sidebar .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar .navigation a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#sidebar .socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    header #open-sidebar {
+        display: none;
+    }
+
+    header .layout nav {
+        display: flex;
+    }
 }
